@@ -1,0 +1,30 @@
+name: Build and Publish
+on:
+  push:
+    branches:
+      - release
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      - run: yarn install
+      - run: yarn run build
+      - rum: yarn run zip
+      - uses: trmcnvn/firefox-addon@v1
+        with:
+          xpi: build/twitch-channel-points.zip
+          manifest: manifest.json
+          api-key: ${{ secrets.FIREFOX_API_KEY }}
+          api-secret: ${{ secrets.FIREFOX_API_SECRET }}
+        continue-on-error: true
+      - uses: trmcnvn/chrome-addon@v1
+        with:
+          zip: build/twitch-channel-points.zip
+          client-id: ${{ secrets.CHROME_CLIENT_ID }}
+          client-secret: ${{ secrets.CHROME_CLIENT_SECRET }}
+          refresh-token: ${{ secrets.CHROME_REFRESH_TOKEN }}
+        continue-on-error: true

@@ -2,7 +2,15 @@ import JSZip from 'node-zip';
 import fs from 'fs';
 import packageJson from '../package.json';
 
-const FILES: string[] = ['manifest.json', 'dist/src/index.js', 'dist/src/auto-clicker.js'];
+const FILES: string[] = [
+  'manifest.json',
+  'dist/src/index.js',
+  'dist/src/auto-clicker.js',
+  'resources/16.png',
+  'resources/48.png',
+  'resources/96.png',
+  'resources/128.png'
+];
 
 function run() {
   try {
