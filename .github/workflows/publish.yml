@@ -13,7 +13,7 @@ jobs:
           node-version: '12.x'
       - run: yarn install
       - run: yarn run build
-      - rum: yarn run zip
+      - run: yarn run zip
       - uses: trmcnvn/firefox-addon@v1
         with:
           xpi: build/twitch-channel-points.zip
