@@ -11,6 +11,7 @@
     "zip": "node dist/src/build.js"
   },
   "devDependencies": {
+    "@types/node": "^12.7.5",
     "node-zip": "^1.1.1",
     "typescript": "^3.6.3"
   }
