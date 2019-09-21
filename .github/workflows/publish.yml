@@ -16,7 +16,7 @@ jobs:
       - run: yarn run zip
       - uses: trmcnvn/firefox-addon@v1
         with:
-          uuid: '{dc572fec-c38b-4914-a045-5d3748096dbb}'
+          uuid: '{35b99c5f-27a2-4ee2-b744-42fd16526dab}'
           xpi: build/twitch-channel-points.zip
           manifest: manifest.json
           api-key: ${{ secrets.FIREFOX_API_KEY }}
