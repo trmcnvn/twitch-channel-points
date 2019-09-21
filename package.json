@@ -1,0 +1,17 @@
+{
+  "name": "twitch-channel-points",
+  "version": "0.1.0",
+  "description": "Auto-click the 'Channel Point Bonus'",
+  "repository": "https://github.com/trmcnvn/twitch-channel-points",
+  "author": "Thomas McNiven",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "zip": "node dist/src/build.js"
+  },
+  "devDependencies": {
+    "node-zip": "^1.1.1",
+    "typescript": "^3.6.3"
+  }
+}
