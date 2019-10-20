@@ -15,13 +15,17 @@
   ) {
     for (let _mutation of mutations) {
       if (targetNode !== null) {
-        const interactiveElement = targetNode.querySelector<HTMLButtonElement>(
-          '.tw-interactive'
-        );
-        if (interactiveElement !== null) {
-          interactiveElement.click();
-        }
+        clickBonus();
       }
+    }
+  }
+
+  function clickBonus() {
+    const interactiveElement = targetNode.querySelector<HTMLButtonElement>(
+      '.tw-interactive'
+    );
+    if (interactiveElement !== null) {
+      interactiveElement.click();
     }
   }
 
@@ -31,6 +35,10 @@
         '.community-points-summary > div:last-child'
       );
       if (targetNode !== null) {
+        // Check if there is already a bonus to collect
+        clickBonus();
+
+        // Observe for future bonuses
         observer.observe(targetNode, config);
         clearInterval(timer);
       }
