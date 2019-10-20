@@ -16,6 +16,7 @@ jobs:
       - run: yarn run zip
       - uses: trmcnvn/firefox-addon@v1
         with:
+          uuid: '{35b99c5f-27a2-4ee2-b744-42fd16526dab}'
           xpi: build/twitch-channel-points.zip
           manifest: manifest.json
           api-key: ${{ secrets.FIREFOX_API_KEY }}
@@ -23,6 +24,7 @@ jobs:
         continue-on-error: true
       - uses: trmcnvn/chrome-addon@v1
         with:
+          extension: mdlokilgafgmaeojenoidfpjcacpllap
           zip: build/twitch-channel-points.zip
           client-id: ${{ secrets.CHROME_CLIENT_ID }}
           client-secret: ${{ secrets.CHROME_CLIENT_SECRET }}

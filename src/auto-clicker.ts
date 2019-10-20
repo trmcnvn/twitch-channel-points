@@ -34,7 +34,7 @@
         observer.observe(targetNode, config);
         clearInterval(timer);
       }
-    }, 2000);
+    }, 1000);
     intervalIds.push(timer);
   }
 
@@ -106,16 +106,20 @@
           'history',
           reactNavigationHook
         );
-        // Determine if the channel has points enabled
-        findReactProp(
-          instance._internalRoot.current,
-          'isChannelPointsEnabled',
-          function(value) {
-            if (value === true) {
-              findPointsContainer();
+        // Determine if the channel has points enabled (May take some time to load)
+        const timer = setInterval(function() {
+          findReactProp(
+            instance._internalRoot.current,
+            'isChannelPointsEnabled',
+            function(value) {
+              if (value) {
+                findPointsContainer();
+              }
+              clearInterval(timer);
             }
-          }
-        );
+          );
+        }, 1000);
+        intervalIds.push(timer);
       }
     });
   }
