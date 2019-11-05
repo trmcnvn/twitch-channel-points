@@ -133,6 +133,7 @@
   }
 
   function start() {
+    window.removeEventListener('beforeunload', cleanup);
     window.addEventListener('beforeunload', cleanup);
     hookIntoReact();
   }
