@@ -15,17 +15,17 @@
   ) {
     for (let _mutation of mutations) {
       if (targetNode !== null) {
-        clickBonus();
+        clickBonus(g);
       }
     }
   }
 
-  function clickBonus() {
+  function clickBonus(g) {
     const interactiveElement = targetNode.querySelector<HTMLButtonElement>(
       '.tw-interactive'
     );
     if (interactiveElement !== null) {
-      interactiveElement.click();
+      interactiveElement.click(h);
     }
   }
 
@@ -36,7 +36,7 @@
       );
       if (targetNode !== null) {
         // Check if there is already a bonus to collect
-        clickBonus();
+        clickBonus(g);
 
         // Observe for future bonuses
         observer.observe(targetNode, config);
