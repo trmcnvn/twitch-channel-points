@@ -22,7 +22,7 @@
 
   function clickBonus() {
     const interactiveElement = targetNode.querySelector<HTMLButtonElement>(
-      '.tw-interactive,.tw-button'
+      '.tw-button'
     );
     if (interactiveElement !== null) {
       interactiveElement.click();
