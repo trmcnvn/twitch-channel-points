@@ -1,6 +1,6 @@
 {
   "name": "twitch-channel-points",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Auto-click the 'Channel Point Bonus'",
   "repository": "https://github.com/trmcnvn/twitch-channel-points",
   "author": "Thomas McNiven",
