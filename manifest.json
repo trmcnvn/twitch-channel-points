@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Twitch Channel Points Auto-Clicker",
   "description": "Auto-click those channel point bonuses",
-  "version": "0.7",
+  "version": "0.8",
   "homepage_url": "https://github.com/trmcnvn/twitch-channel-points",
   "icons": {
     "16": "resources/16.png",
