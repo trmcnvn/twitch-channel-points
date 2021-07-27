@@ -22,7 +22,7 @@
 
   function clickBonus() {
     const interactiveElement = targetNode.querySelector<HTMLButtonElement>(
-      '.VGQNd'
+      '[aria-label="Claim Bonus"]'
     );
     if (interactiveElement !== null) {
       interactiveElement.click();
