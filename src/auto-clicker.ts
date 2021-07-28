@@ -21,11 +21,9 @@
   }
 
   function clickBonus() {
-    const interactiveElement = targetNode.querySelector<HTMLButtonElement>(
-      '[aria-label="Claim Bonus"]'
-    );
-    if (interactiveElement !== null) {
-      interactiveElement.click();
+    const buttonElements = targetNode.getElementsByTagName('button')
+    if (buttonElements.length > 0) {
+      buttonElements[0].click()
     }
   }
 
